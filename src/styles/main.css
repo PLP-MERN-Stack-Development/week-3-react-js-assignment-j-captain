@@ -1,0 +1,60 @@
+/* main.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Custom Base Styles ===== */
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+  h1 {
+    @apply text-3xl font-bold mb-4;
+  }
+  h2 {
+    @apply text-2xl font-semibold mb-3;
+  }
+  input, textarea {
+    @apply border rounded p-2 w-full;
+  }
+}
+
+/* ===== Custom Components ===== */
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors;
+  }
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 border border-gray-200;
+  }
+  .input-error {
+    @apply border-red-500 focus:ring-red-500 focus:border-red-500;
+  }
+}
+
+/* ===== Custom Utilities ===== */
+@layer utilities {
+  .text-shadow {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    @apply hidden;
+  }
+}
+
+/* ===== Global Styles (Use Sparingly) ===== */
+.special-gradient {
+  background: linear-gradient(135deg, #8a2387, #e94057, #f27121);
+}
+
+/* Third-party library overrides */
+.flatpickr-calendar {
+  @apply shadow-lg rounded-lg !important;
+}
